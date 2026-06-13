@@ -1,0 +1,11 @@
+# Working site configuration carries credentials and must not be committed (Req 1.5).
+# The committed template config.sample.php documents the shape.
+public_html/includes/config.php
+!public_html/includes/config.sample.php
+
+# Runtime error log (written outside the web root by the production bootstrap, Req 22.4)
+php-error.log
+
+# Admin-uploaded media (runtime content, not source)
+public_html/assets/uploads/*
+!public_html/assets/uploads/.htaccess

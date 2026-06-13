@@ -1,0 +1,81 @@
+# =============================================================================
+# assets/uploads/.htaccess
+# Block server-side script execution inside the user-uploads directory.
+#
+# Requirement 22.2: THE System SHALL deny execution of PHP files within the
+# uploads directory through .htaccess.
+#
+# This directory only ever contains image uploads validated by upload() in
+# includes/functions.php. Even so, a defence-in-depth posture demands that NO
+# file placed here can ever be executed as a server-side script, in case the
+# MIME/extension validation is bypassed. The directives below are layered so
+# that the protection holds across the range of Apache configurations found on
+# shared hosting (e.g. Hostinger), tolerating modules that may or may not be
+# loaded.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 1) Turn the PHP engine off for this directory (mod_php).
+#    Wrapped in IfModule guards so the directive does not 500 the server on
+#    hosts where mod_php is not present (e.g. PHP-FPM/CGI/LiteSpeed setups).
+# -----------------------------------------------------------------------------
+<IfModule mod_php.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php7.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php8.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php5.c>
+    php_flag engine off
+</IfModule>
+# LiteSpeed (common on Hostinger) honours lsapi engine toggling.
+<IfModule lsapi_module>
+    php_flag engine off
+</IfModule>
+
+# -----------------------------------------------------------------------------
+# 2) Strip any handlers/types that would cause a file to be run as a script.
+#    These run regardless of whether php_flag is permitted, so files mapped to
+#    a PHP/CGI handler are demoted to plain static content. RemoveHandler and
+#    RemoveType are core/mod_mime directives and are safe without IfModule.
+# -----------------------------------------------------------------------------
+RemoveHandler .php .phtml .php3 .php4 .php5 .php7 .php8 .pht .phps .phar
+RemoveType .php .phtml .php3 .php4 .php5 .php7 .php8 .pht .phps .phar
+
+# Defensively force any leftover dynamic handler to serve as plain text.
+<IfModule mod_mime.c>
+    AddType text/plain .php .phtml .php3 .php4 .php5 .php7 .php8 .pht .phps .phar .cgi .pl .py .jsp .asp .aspx .sh .shtml
+</IfModule>
+
+# Neutralise SetHandler-based execution (used by PHP-FPM proxies / SetHandler
+# application/x-httpd-php). Re-point handling at the default static handler.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Block direct requests to anything that looks like an executable script.
+    RewriteRule \.(php|phtml|php[3-8]|pht|phps|phar|cgi|pl|py|jsp|asp|aspx|sh|shtml)$ - [F,L,NC]
+</IfModule>
+
+# -----------------------------------------------------------------------------
+# 3) Last-resort access denial for executable script extensions, for servers
+#    where php_flag is disallowed (AllowOverride limits) and handler removal is
+#    insufficient. Supports both Apache 2.2 (Order/Deny) and 2.4 (Require).
+# -----------------------------------------------------------------------------
+<FilesMatch "(?i)\.(php|phtml|php3|php4|php5|php7|php8|pht|phps|phar|cgi|pl|py|jsp|asp|aspx|sh|shtml)$">
+    <IfModule mod_authz_core.c>
+        # Apache 2.4+
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        # Apache 2.2
+        Order Allow,Deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# -----------------------------------------------------------------------------
+# 4) Belt-and-braces: explicitly disable CGI execution in this directory.
+# -----------------------------------------------------------------------------
+Options -ExecCGI -Indexes

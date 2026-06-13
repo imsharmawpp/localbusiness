@@ -1,0 +1,159 @@
+/* ==========================================================================
+   vertical.css — Healthcare / Wellness skin (Local Business Website System)
+   Loads AFTER main.css. This is an OVERRIDE / RESTYLE layer, not a rebuild:
+   it re-affirms the healthcare palette on :root and applies a small set of
+   clinic-appropriate touches (clean, calm, trustworthy medical feel) using
+   the component classes already defined in main.css. No new components,
+   no structural rewrites.
+   Per design.md "CSS Architecture" + "Frontend Design System".
+   Requirements: 11.1, 11.3.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Healthcare palette — formalize the teal skin (Req 11.1)
+   --------------------------------------------------------------------------
+   The canonical token set lives in main.css :root. Healthcare teal is already
+   the engine default; here we make the vertical's intent explicit so this skin
+   is self-documenting and portable when copied to a new clinic site.
+
+   Primary  : teal  (#0e7c7b) — clinical, calm, trustworthy
+   Accent   : warm  (#f4a259) — friendly, human warmth against the cool teal
+   -------------------------------------------------------------------------- */
+:root{
+  --c-primary:#0e7c7b;   /* teal — healthcare primary */
+  --c-accent:#f4a259;    /* warm sand — friendly accent */
+
+  /* Clinic-tuned support tokens layered on the canonical set. These only
+     refine the medical look & feel; they do not replace main.css tokens. */
+  --c-primary-soft:color-mix(in srgb, var(--c-primary) 8%, var(--c-bg));
+  --c-primary-tint:color-mix(in srgb, var(--c-primary) 14%, transparent);
+  --c-trust:#1e7e46;     /* reassurance green for "open"/positive trust cues */
+}
+
+/* --------------------------------------------------------------------------
+   PRIMARY COLOR OVERRIDE CONVENTION (optional, documented)
+   --------------------------------------------------------------------------
+   The admin "primary_color" setting can drive the live primary color WITHOUT
+   editing this file. Because an inline style declaration outranks a stylesheet
+   rule, header.php may emit the saved setting as an inline custom property on
+   the document root (or <body>), e.g.:
+
+       <body style="--c-primary: <?= e(setting('primary_color')) ?>;">
+
+   That inline value cascades to every descendant and overrides the --c-primary
+   declared above, so all teal-derived component colors (buttons, links, icons,
+   focus rings, accents) re-tint automatically. When the setting is empty or
+   absent, no inline property is emitted and this file's teal default applies.
+   Keep the value a valid CSS color (e.g. "#0e7c7b").
+   -------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------
+   2. Hero — calmer, clinical gradient (restyle of main.css .hero)
+   -------------------------------------------------------------------------- */
+.hero{
+  background:
+    radial-gradient(1200px 480px at 85% -10%,
+      var(--c-primary-tint), transparent 60%),
+    linear-gradient(180deg, var(--c-primary-soft), var(--c-bg));
+}
+.hero__lead{color:var(--c-muted);}
+/* Soft teal frame around hero imagery for a clean medical card feel */
+.hero__media{
+  border:1px solid var(--c-primary-tint);
+  box-shadow:0 18px 44px color-mix(in srgb, var(--c-primary) 16%, transparent);
+}
+
+/* Eyebrow label reads as a calm clinical kicker */
+.section__head .eyebrow{
+  color:var(--c-primary);
+  letter-spacing:.1em;
+}
+
+/* --------------------------------------------------------------------------
+   3. Feature grid — "trust signals" treatment (restyle of .feature)
+   -------------------------------------------------------------------------- */
+.feature{
+  border-color:var(--c-primary-tint);
+}
+.feature:hover{
+  border-color:color-mix(in srgb, var(--c-primary) 35%, transparent);
+}
+.feature__icon{
+  background:var(--c-primary-tint);
+  color:var(--c-primary);
+}
+
+/* --------------------------------------------------------------------------
+   4. Service cards — clean clinical card with teal top accent (restyle)
+   -------------------------------------------------------------------------- */
+.service-card{
+  border-top:3px solid var(--c-primary);
+}
+.service-card:hover{
+  box-shadow:0 16px 36px color-mix(in srgb, var(--c-primary) 18%, transparent);
+}
+.service-card__price{color:var(--c-primary);}
+.service-card__link{color:var(--c-primary);}
+
+/* --------------------------------------------------------------------------
+   5. Testimonials — gentle teal patient-story styling (restyle)
+   -------------------------------------------------------------------------- */
+.testimonials{background:var(--c-primary-soft);}
+.testimonial{
+  border-color:var(--c-primary-tint);
+}
+/* Subtle teal opening quotation mark for a warm patient-voice feel */
+.testimonial__quote{position:relative;}
+.testimonial__author img{
+  border:2px solid var(--c-primary-tint);
+}
+.slider__btn:hover{
+  border-color:var(--c-primary);
+  color:var(--c-primary);
+}
+
+/* --------------------------------------------------------------------------
+   6. FAQ accordion — clinic-clean, teal active state (restyle)
+   -------------------------------------------------------------------------- */
+.accordion__item{
+  border-color:var(--c-primary-tint);
+}
+.accordion__trigger[aria-expanded="true"]{
+  color:var(--c-primary);
+  background:var(--c-primary-soft);
+}
+
+/* --------------------------------------------------------------------------
+   7. Contact block — reassuring "open" cue + teal detail icons (restyle)
+   -------------------------------------------------------------------------- */
+.contact-detail__icon{
+  background:var(--c-primary-tint);
+  color:var(--c-primary);
+}
+/* Lean the open badge toward the clinic trust-green for a confident cue */
+.open-badge--open{
+  background:color-mix(in srgb, var(--c-trust) 16%, transparent);
+  color:var(--c-trust);
+}
+.map-embed{border:1px solid var(--c-primary-tint);}
+
+/* --------------------------------------------------------------------------
+   8. Footer — quiet teal seam to tie the clinic theme together (restyle)
+   -------------------------------------------------------------------------- */
+.site-footer{
+  border-top:4px solid var(--c-primary);
+}
+.footer-social a:hover{background:var(--c-primary);}
+.footer-gbp{color:#fff;}
+
+/* --------------------------------------------------------------------------
+   9. Header / CTA polish — keep Book Appointment unmistakably primary
+   -------------------------------------------------------------------------- */
+.primary-nav a:hover,
+.primary-nav a[aria-current="page"]{color:var(--c-primary);}
+.call-link{color:var(--c-primary);}
+
+/* --------------------------------------------------------------------------
+   10. Reduced motion — inherit main.css behavior; nothing extra to suppress
+       here since this layer only adjusts color/border, not animation (Req 11.6)
+   -------------------------------------------------------------------------- */

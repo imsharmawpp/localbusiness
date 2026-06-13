@@ -1,0 +1,12 @@
+# robots.txt — Local Business Website System
+# Allow all well-behaved crawlers to index the public site.
+User-agent: *
+Allow: /
+
+# Keep the admin area out of search results (it is also session-guarded).
+Disallow: /admin/
+
+# Sitemap location.
+# NOTE: Update the host below to match the deployed domain (HTTPS, no trailing slash on host).
+#       e.g. https://yourclinic.com/sitemap.php
+Sitemap: https://example.com/sitemap.php
