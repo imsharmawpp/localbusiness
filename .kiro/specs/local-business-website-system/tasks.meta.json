@@ -1,0 +1,705 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Write `db/schema.sql` with shared and healthcare tables": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526346
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351535065
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351707616
+      }
+    ],
+    "1.2 Write `db/seed.sql` with demo content, settings, and admin user": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526350
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351714203
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351835252
+      }
+    ],
+    "2.1 Create `includes/config.sample.php` and gitignore `config.php`": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526354
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351715201
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351835712
+      }
+    ],
+    "2.2 Implement `includes/db.php` PDO singleton": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526357
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351840445
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781352039576
+      }
+    ],
+    "2.3 Implement `includes/functions.php` helper library": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526361
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781352040577
+      }
+    ],
+    "2.7 Implement `includes/settings.php` settings loader": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526364
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781352040949
+      }
+    ],
+    "3. Checkpoint - shared includes": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526368
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781352053964
+      }
+    ],
+    "4.1 Implement `admin/auth.php` session guard": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526372
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781352066260
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781352222707
+      }
+    ],
+    "4.2 Implement `admin/index.php` login": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526377
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781352223709
+      }
+    ],
+    "4.3 Implement `admin/dashboard.php` and `admin/logout.php`": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526381
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781352224090
+      }
+    ],
+    "5.1 Implement `admin/settings.php` settings editor": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526384
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781352233655
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781352699469
+      }
+    ],
+    "5.2 Implement `admin/content_blocks.php` CRUD": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526388
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781352234627
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781352699850
+      }
+    ],
+    "5.4 Implement `admin/testimonials.php` CRUD": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526391
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781352236770
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781352701787
+      }
+    ],
+    "5.5 Implement `admin/leads.php` inbox with CSV export": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526395
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781352236937
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781352701868
+      }
+    ],
+    "6. Checkpoint - shared admin": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526398
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781352708210
+      }
+    ],
+    "7.1 Implement `assets/css/main.css` tokens, base, and components": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526402
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351535284
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351709599
+      }
+    ],
+    "7.2 Implement `assets/css/vertical.css` healthcare teal overrides": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526405
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351715997
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351836801
+      }
+    ],
+    "7.3 Implement `assets/js/main.js` interactions": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526409
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351535396
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351709720
+      }
+    ],
+    "7.4 Implement `includes/header.php` with SEO, JSON-LD, and sticky nav": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526412
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781352710166
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781352936481
+      }
+    ],
+    "7.5 Implement `includes/footer.php`": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526416
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781352710264
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781352937360
+      }
+    ],
+    "8. Checkpoint - shared frontend": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526420
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781352937814
+      }
+    ],
+    "9.1 Implement `admin/services.php` CRUD": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526424
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781352944460
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353076714
+      }
+    ],
+    "9.2 Implement `admin/doctors.php` CRUD": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526428
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781352945449
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353078704
+      }
+    ],
+    "9.3 Implement `admin/appointments.php` inbox with status and CSV": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526434
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781352946488
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353079705
+      }
+    ],
+    "9.5 Implement `admin/faqs.php` CRUD": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526438
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781352946898
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353080780
+      }
+    ],
+    "10. Checkpoint - healthcare admin": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526441
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353081061
+      }
+    ],
+    "11.1 Implement `index.php` home page": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526444
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353087774
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353319912
+      }
+    ],
+    "11.2 Implement `about.php`, `doctors.php`, and `gallery.php`": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526448
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353088776
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353320853
+      }
+    ],
+    "11.3 Implement `services.php` list page": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526451
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353089775
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353321837
+      }
+    ],
+    "11.4 Implement `service.php` detail page with slug lookup and 404": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526454
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353091738
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353322851
+      }
+    ],
+    "11.6 Implement `appointment.php` form with dual write": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526458
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353325319
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353523435
+      }
+    ],
+    "11.8 Implement `contact.php` form with lead capture": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526461
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353325649
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353522422
+      }
+    ],
+    "11.10 Implement `404.php` shared not-found view": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526465
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353091843
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353324029
+      }
+    ],
+    "12. Checkpoint - public pages": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526469
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353524447
+      }
+    ],
+    "13.1 Implement `sitemap.php` dynamic XML": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526472
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353525444
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353644753
+      }
+    ],
+    "13.3 Create `robots.txt` and root `.htaccess`": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526475
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353526444
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353645736
+      }
+    ],
+    "13.4 Create `assets/uploads/.htaccess` to block PHP execution": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526479
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353527508
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353646737
+      }
+    ],
+    "14.1 Implement `tests/run_tests.php` harness and wire property tests": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526482
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353647725
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353884950
+      }
+    ],
+    "15.1 Write `README.md` with Hostinger deploy steps": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526487
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353648758
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353886865
+      }
+    ],
+    "16. Final checkpoint": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351526490
+      },
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353886930
+      }
+    ],
+    "1. Database schema and seed deliverables": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781351835256
+      }
+    ],
+    "2. Shared includes (config, DB, helpers, settings loader)": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781352040953
+      }
+    ],
+    "4. Shared admin: authentication and dashboard": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781352224094
+      }
+    ],
+    "5. Shared admin CRUD modules": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781352701879
+      }
+    ],
+    "7. Shared frontend design system": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781352937367
+      }
+    ],
+    "9. Healthcare admin modules": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353080785
+      }
+    ],
+    "11. Healthcare public pages": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353523439
+      }
+    ],
+    "13. SEO and server infrastructure": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353646741
+      }
+    ],
+    "14. Standalone test harness and QA reference": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353884953
+      }
+    ],
+    "15. Deployment documentation": [
+      {
+        "executionId": "5c603daf-5b8f-45f7-818d-e851b2bbe63f",
+        "chatSessionId": "ccbde52a-f879-43ac-aeb0-b45fd46eae6a",
+        "timestamp": 1781353886873
+      }
+    ]
+  }
+}
