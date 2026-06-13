@@ -1,5 +1,6 @@
 # .htaccess — Local Business Website System (Apache, Hostinger shared hosting)
-# Handles: HTTPS force, clean service URLs, includes/uploads hardening, 404 page.
+# Handles: HTTPS force, clean service URLs, extensionless page URLs,
+# includes/uploads hardening, 404 page.
 
 # Default document for directory requests.
 DirectoryIndex index.php
@@ -11,14 +12,26 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# --- Hardening: deny direct web access to internal includes --------------
+RewriteRule ^includes/ - [F,L]
+
 # --- Clean URLs for service detail pages ---------------------------------
 # /services/{slug} -> service.php?slug={slug}
 # The query-string form (service.php?slug=...) remains valid as a fallback,
 # so the page works even where rewriting is unavailable.
 RewriteRule ^services/([a-z0-9-]+)/?$ service.php?slug=$1 [L,QSA]
 
-# --- Hardening: deny direct web access to internal includes --------------
-RewriteRule ^includes/ - [F,L]
+# --- Clean (extensionless) URLs for top-level pages ----------------------
+# Nav/footer/sitemap link to /about, /services, /doctors, /gallery,
+# /contact, /appointment, etc. Map an extensionless path to its matching
+# .php file (e.g. /about -> about.php) ONLY when that file actually exists.
+# The -f/-d guards skip real files/dirs (assets, /admin) so they serve
+# directly, and the rewrite is internal so the request method (incl. POST
+# to /appointment and /contact) is preserved.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1.php -f
+RewriteRule ^(.+?)/?$ $1.php [L]
 
 # --- Custom error document ----------------------------------------------
 ErrorDocument 404 /404.php
